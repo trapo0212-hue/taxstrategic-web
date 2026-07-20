@@ -693,7 +693,6 @@
   <div class="prog-item" data-target="servicios" title="Servicios"><span></span></div>
   <div class="prog-item" data-target="diferencial" title="Diferencial"><span></span></div>
   <div class="prog-item" data-target="proceso" title="Proceso"><span></span></div>
-  <div class="prog-item" data-target="fundador" title="Equipo"><span></span></div>
   <div class="prog-item" data-target="contacto" title="Contacto"><span></span></div>
 </div>
 
@@ -704,7 +703,6 @@
   <ul class="nav-links">
     <li><a href="#servicios" onclick="scrollTo('servicios');return false;">Servicios</a></li>
     <li><a href="#diferencial" onclick="scrollTo('diferencial');return false;">Diferencial</a></li>
-    <li><a href="#fundador" onclick="scrollTo('fundador');return false;">Equipo</a></li>
     <li><a href="#contacto" onclick="scrollTo('contacto');return false;">Contacto</a></li>
   </ul>
   <button class="nav-cta" onclick="scrollTo('contacto')">Consulta gratuita</button>
@@ -924,40 +922,6 @@
       <p class="step-desc">Seguimiento continuo y actualización ante cambios normativos que puedan afectar la estrategia definida.</p>
     </div>
   </div>
-  <div class="next-section"><a class="next-btn" href="#fundador" onclick="scrollTo('fundador');return false;"><span>Conoce al equipo</span><span class="arrow">↓</span></a></div>
-</section>
-
-<!-- FUNDADOR -->
-<section id="fundador">
-  <div class="fundador-layout">
-    <div class="fundador-photo fade-up">
-      <div class="fundador-photo-inner">
-        <div class="avatar-placeholder">👤</div>
-      </div>
-      <div class="fundador-deco"></div>
-      <div class="fundador-photo-label">
-        <p>Socio Fundador · TaxStrategic</p>
-      </div>
-    </div>
-    <div class="fundador-bio fade-up">
-      <div class="section-label">Fundador</div>
-      <h2 class="fundador-name">[Su Nombre]</h2>
-      <div class="fundador-title">Consultor Tributario Senior · Socio Fundador</div>
-      <p class="fundador-text">
-        Con más de 14 años de experiencia en las principales firmas de consultoría tributaria de Chile y el mundo, he acompañado a empresas multinacionales, grupos económicos familiares y emprendedores de alto crecimiento en sus desafíos fiscales más complejos.
-      </p>
-      <p class="fundador-text">
-        Mi trayectoria en entornos de alta exigencia internacional me permitió desarrollar una visión estratégica que hoy pongo al servicio de mis clientes desde una boutique especializada, donde la calidad técnica y la atención personal no son compromisos: son el modelo de negocio.
-      </p>
-      <div class="fundador-creds">
-        <div class="cred">Abogado / Contador Auditor · [Universidad]</div>
-        <div class="cred">Magíster en Planificación Tributaria · [Universidad]</div>
-        <div class="cred">+14 años en firmas de consultoría de estándar internacional</div>
-        <div class="cred">Especialista en Tributación Internacional y M&A</div>
-        <div class="cred">Docente universitario en cursos de Derecho Tributario</div>
-      </div>
-    </div>
-  </div>
   <div class="next-section"><a class="next-btn" href="#contacto" onclick="scrollTo('contacto');return false;"><span>Contáctanos</span><span class="arrow">↓</span></a></div>
 </section>
 
@@ -1042,7 +1006,7 @@
       <div id="contact-success-panel" style="display: none; background: white; border: 1px solid rgba(26,37,53,.12); padding: 48px 36px; text-align: center; flex-direction: column; align-items: center; justify-content: center; min-height: 400px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); animation: fadeIn 0.5s ease;">
         <div style="font-size: 3.5rem; color: #48bb78; margin-bottom: 24px; animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">✓</div>
         <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #1a2535; margin-bottom: 16px;">¡Mensaje Recibido!</h3>
-        <p style="font-size: 0.95rem; color: var(--warm-gray); line-height: 1.6; max-width: 340px; margin-bottom: 32px;">Gracias por contactarnos. Nuestro equipo y el socio fundador revisarán su consulta y le responderán a la brevedad.</p>
+        <p style="font-size: 0.95rem; color: var(--warm-gray); line-height: 1.6; max-width: 340px; margin-bottom: 32px;">Gracias por contactarnos. Nuestro equipo de consultores revisará su consulta y le responderá a la brevedad.</p>
         <button class="btn-primary" onclick="resetContactForm()" style="padding: 12px 32px; font-size: 0.78rem; border: none; cursor: pointer;">Enviar otro mensaje</button>
       </div>
     </div>
@@ -1167,7 +1131,7 @@
   }
 
   // ── ACTIVE NAV + PROGRESS ──
-  const sections = ['inicio','servicios','diferencial','proceso','fundador','contacto'];
+  const sections = ['inicio','servicios','diferencial','proceso','contacto'];
   const navLinks = document.querySelectorAll('.nav-links a');
   const progItems = document.querySelectorAll('.prog-item');
 
@@ -1470,9 +1434,9 @@
 let chatOpen = false, leadDone = false, turns = 0;
 let history = [];
 
-const SYS = `Eres el asistente virtual de TaxStrategic, consultora tributaria boutique fundada por un experto con más de 14 años de trayectoria en las firmas de consultoría más exigentes del mundo.
+const SYS = `Eres el asistente virtual de TaxStrategic, consultora tributaria boutique especializada en asesoría tributaria de alto nivel con estándares internacionales.
 
-Tu misión: atender consultas iniciales de prospectos con calidez y profesionalismo, y motivarles a agendar una reunión o llamada con el socio fundador.
+Tu misión: atender consultas iniciales de prospectos con calidez y profesionalismo, y motivarles a agendar una reunión o llamada de consulta gratuita.
 
 Servicios: planificación tributaria, tributación internacional, due diligence M&A, litigios ante el SII, tax compliance, planificación patrimonial.
 
@@ -1554,7 +1518,7 @@ async function sendChat(forced) {
     let reply = "";
 
     if (query.includes("planific") || query.includes("estrateg") || query.includes("optimiza") || query.includes("holding") || query.includes("renta") || query.includes("iva")) {
-      reply = "Diseñamos estructuras tributarias eficientes y holding empresariales que optimizan la carga fiscal dentro del marco legal. ¿Le interesaría coordinar una llamada con nuestro socio fundador para analizar su caso?";
+      reply = "Diseñamos estructuras tributarias eficientes y holding empresariales que optimizan la carga fiscal dentro del marco legal. ¿Le interesaría coordinar una llamada con nuestro equipo de consultores para analizar su caso?";
     } else if (query.includes("internac") || query.includes("beps") || query.includes("doble tri") || query.includes("precios") || query.includes("transferencia")) {
       reply = "Asesoramos en convenios de doble tributación, precios de transferencia y estructuración de inversiones transfronterizas. ¿Desea que evaluemos su estructura actual en una reunión?";
     } else if (query.includes("due diligence") || query.includes("m&a") || query.includes("compra") || query.includes("venta") || query.includes("fusion") || query.includes("adquisic")) {
@@ -1568,7 +1532,7 @@ async function sendChat(forced) {
     } else if (query.includes("contacto") || query.includes("cita") || query.includes("reunion") || query.includes("agendar") || query.includes("llamar") || query.includes("telefono")) {
       reply = "¡Perfecto! Puede dejarnos sus datos de contacto en el formulario que se desplegará a continuación para coordinar una reunión de consulta directa.";
     } else {
-      reply = "En TaxStrategic ofrecemos consultoría tributaria premium de estándar internacional. Para darle una orientación adecuada a su caso, le sugiero conversar brevemente con nuestro socio fundador.";
+      reply = "En TaxStrategic ofrecemos consultoría tributaria premium de estándar internacional. Para darle una orientación adecuada a su caso, le sugiero conversar brevemente con uno de nuestros especialistas.";
     }
 
     history.push({role:'assistant', content: reply});
@@ -1578,7 +1542,7 @@ async function sendChat(forced) {
     if ((turns >= 2 || query.includes("contacto") || query.includes("cita") || query.includes("reunion") || query.includes("agendar") || query.includes("llamar")) && !leadDone) {
       leadDone = true;
       setTimeout(() => {
-        addBot("¿Le gustaría que nuestro socio fundador lo contacte para una consulta gratuita de 15 minutos? Puedo registrar sus datos ahora:", true);
+        addBot("¿Le gustaría que un consultor de nuestro equipo lo contacte para una consulta gratuita de 15 minutos? Puedo registrar sus datos ahora:", true);
       }, 1000);
     } else if (!leadDone) {
       setTimeout(() => {
@@ -1593,8 +1557,7 @@ function submitLead() {
   const e = document.getElementById('le')?.value?.trim();
   if (!n || !e) { alert('Por favor ingrese nombre y email.'); return; }
   document.querySelectorAll('.lead-form').forEach(f => f.closest('.msg').remove());
-  addBot(`¡Perfecto, ${n}! Sus datos han quedado registrados. El socio fundador se pondrá en contacto muy pronto. ¡Hasta pronto!`);
-  console.log('Lead:', {n, e, phone: document.getElementById('lp')?.value});
+  addBot(`¡Perfecto, ${n}! Sus datos han quedado registrados. Nuestro equipo se pondrá en contacto muy pronto. ¡Hasta pronto!`);
 }
 </script>
 
